@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#FF9900">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="PATANI"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btn_dashboard"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_analytics"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Leuwiliang, Bogor"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_location"
+        android:layout_marginStart="20dp"
+        android:text="Soil quality description"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+
+    <EditText
+        android:id="@+id/edt_nitrogen"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_description"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:inputType="numberDecimal"
+        android:hint="Nitrogen"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/edt_phosphorus"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_description"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/edt_nitrogen"
+        android:inputType="numberDecimal"
+        android:hint="Phosphorus"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/edt_potassium"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_phosphorus"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:inputType="numberDecimal"
+        android:hint="Potassium"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/edt_temp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:textSize="15sp"
+        android:hint="Temperature (F)"
+        android:layout_below="@id/edt_nitrogen"
+        android:layout_toRightOf="@id/edt_potassium"/>
+
+    <EditText
+        android:id="@+id/edt_humid"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:inputType="numberDecimal"
+        android:textSize="15sp"
+        android:hint="Humidity"
+        android:layout_below="@id/edt_temp"/>
+
+    <EditText
+        android:id="@+id/edt_ph"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:inputType="numberDecimal"
+        android:textSize="15sp"
+        android:hint="pH"
+        android:layout_below="@id/edt_potassium"
+        android:layout_toRightOf="@id/edt_humid"/>
+
+    <EditText
+        android:id="@+id/edt_rainfall"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:textSize="15sp"
+        android:hint="Rainfall"
+        android:layout_below="@id/edt_ph"/>
+
+    <Button
+        android:id="@+id/btn_recommend"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Rekomendasi"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/edt_rainfall"
+        />
+
+    <TextView
+        android:id="@+id/tv_recommendation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_rainfall"
+        android:visibility="gone"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Crops Recommendation:"
+        android:textColor="@color/black"
+        android:textSize="17sp" />
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/btn_recommend"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/blue" />
+
+    <TextView
+        android:id="@+id/tv_crops_rec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_recommend"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:visibility="gone"
+        android:layout_marginBottom="20dp"
+        android:layout_centerInParent="true"
+        android:text="UNDEFINED"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+</RelativeLayout>
