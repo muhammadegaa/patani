@@ -16,6 +16,9 @@
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".LandList"
+            android:exported="true" />
+        <activity
             android:name=".Dashboard"
             android:exported="true" />
         <activity
