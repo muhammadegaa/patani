@@ -45,7 +45,7 @@ class CropsPick : AppCompatActivity() {
             if(crops == false){
                 startActivity(Intent(this, MainActivity::class.java))
             } else {
-                startActivity(Intent(this, SoilTreatment::class.java))
+                startActivity(Intent(this, LandList::class.java))
             }
         }
 

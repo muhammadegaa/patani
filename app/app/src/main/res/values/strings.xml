@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Patani</string>
+    <string-array name="crops_array">
+        <item>Padi</item>
+        <item>Ubi Jalar</item>
+        <item>Pisang</item>
+        <item>Palawija</item>
+    </string-array>
+</resources>
